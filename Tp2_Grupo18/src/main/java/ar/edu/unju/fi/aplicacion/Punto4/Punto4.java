@@ -7,6 +7,7 @@ public class Punto4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int num=0;
+		//variable logica
 		boolean band=true;
 		//metodo para detectar mes ingresado
 		Mes unMes = new Mes();
