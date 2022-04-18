@@ -17,7 +17,8 @@ public class Punto13 {
 		
 		System.out.println("ingrese cantidad de horas trabajadas: ");
 		horastrabajadas = dato.nextDouble();
-		System.out.println("el sueldo de pepe "+unEmpleado.calcularSueldo(horastrabajadas));
+		Double a = unEmpleado.calcularSueldo(horastrabajadas);
+        unEmpleado.imprimir(horastrabajadas,a);
 	}
 
 }
