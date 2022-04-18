@@ -52,11 +52,22 @@ public class Empleado {
 		this.horasTrabajas = horasTrabajas;
 	}
 
-	LocalDate fechaIngreso;
-	String legajo;
+	LocalDate fechaIngreso = LocalDate.of(1900,01,01);
+	String legajo = "-99999";
 	String email;
 	Double sueldo;
 	Double horasTrabajas;
+	
+	
+	
+	public Empleado() {
+		
+	}
+	public Empleado(String nombre,String legajo,Double horasTrabajas) {
+		this.nombre = nombre;
+		this.legajo = legajo;
+		this.horasTrabajas = horasTrabajas;	
+	}
 	
 	public Empleado(String nombre, LocalDate fechaIngreso, String legajo, String email, Double sueldo,
 			Double horasTrabajas) {
@@ -69,6 +80,20 @@ public class Empleado {
 		this.horasTrabajas = horasTrabajas;
 	}
 	
+	public Empleado(String nombre, LocalDate fechaIngreso, Double horasTrabajas) {
+		super();
+		this.nombre = nombre;
+		this.fechaIngreso = fechaIngreso;
+		this.horasTrabajas = horasTrabajas;
+	}
+	
+	public Empleado(String nombre, Double horasTrabajas) {
+		super();
+		this.nombre = nombre;
+		this.horasTrabajas = horasTrabajas;
+	}
+	
+
 	public Double calcularSueldo(double hs) {
 		double h=0.0;
 		double hextra=0.0;
@@ -84,5 +109,12 @@ public class Empleado {
 			total = Sextra + h;
 		}
 		return total;
+	}
+	public void imprimir(Double horas, Double a) {
+		System.out.println("Nombre: " + nombre + " FechaIngreso: " + fechaIngreso + " Legajo: " + legajo + " Email: " + email + " Horas Trabajadas: " + horas + " Sueldo: " + a);
+	}
+	public void Mostrar() {
+		System.out.println("Nombre: " + nombre + " FechaIngreso: " + fechaIngreso + " Legajo: " + legajo + " Horas Trabajadas: " + horasTrabajas);
+		
 	}
 }
